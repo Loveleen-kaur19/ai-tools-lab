@@ -1,4 +1,5 @@
 def is_palindrome(s):
+
     """Check whether a string is a palindrome.
 
     Args:
@@ -28,6 +29,14 @@ def count_words(text):
         >>> count_words("Hello brave new world")
         4
     """
+
+    """Check whether a string is a palindrome."""
+    s = s.lower()
+    return s == s[::-1]
+
+
+def count_words(text):
+    """Count the number of words in a text."""
     return len(text.split())
 
 
@@ -57,3 +66,9 @@ if __name__ == "__main__":
 
     # Testing celsius_to_fahrenheit
     print("celsius_to_fahrenheit(100):", celsius_to_fahrenheit(100))
+
+
+# Testing the functions
+print(is_palindrome("madam"))
+print(count_words("Python is easy to learn"))
+print(celsius_to_fahrenheit(25))
